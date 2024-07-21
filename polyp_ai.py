@@ -10,6 +10,7 @@ Original file is located at
 ###Here is the code used to create Polyp AI, a CNN based model used to categorize polyps during colonoscopies. Data was downloaded from the PolypGen database
 ###Lines 13 - 64 and 470 - end of file contain all code used to train the model
 ###The commented section between 64 - 470 was my attempt at implementing an Object detection model with the use of CNNs that outputs masks.
+###Use your own API token on line 40 to extract the data from synapse client
 
 import torch
 from torch import nn
@@ -32,10 +33,12 @@ from pathlib import Path
 # Define the destination path for the downloaded file
 data_path = Path("data")
 
-# Initialize the Synapse client
-syn = synapseclient.Synapse()
-syn.login(authToken = "eyJ0eXAiOiJKV1QiLCJraWQiOiJXN05OOldMSlQ6SjVSSzpMN1RMOlQ3TDc6M1ZYNjpKRU9VOjY0NFI6VTNJWDo1S1oyOjdaQ0s6RlBUSCIsImFsZyI6IlJTMjU2In0.eyJhY2Nlc3MiOnsic2NvcGUiOlsidmlldyIsImRvd25sb2FkIl0sIm9pZGNfY2xhaW1zIjp7fX0sInRva2VuX3R5cGUiOiJQRVJTT05BTF9BQ0NFU1NfVE9LRU4iLCJpc3MiOiJodHRwczovL3JlcG8tcHJvZC5wcm9kLnNhZ2ViYXNlLm9yZy9hdXRoL3YxIiwiYXVkIjoiMCIsIm5iZiI6MTcyMDk3MjQzNiwiaWF0IjoxNzIwOTcyNDM2LCJqdGkiOiIxMDAzMCIsInN1YiI6IjM1MDkwMTYifQ.RTqZPrxwBgVngL16Jht8ylvNiZrpsFuwDPOxb_8K8lMtiwAlLA2IeVKoBisos2VIVmdTOooZN26LLYZh_V0FLiLd0b0mYTBQ-Y_W2Km4rka9ijiAovj4uv6-jhghbBcXo4E-cenSlz8sKC-RnP3tRpdAQ2S5ClEB2tBJtDnixHbICnsFtvWDkicejbcGK9za_GnITDPHok7pKxtQTGTPjjedYhWXPR9lULvQaVn_QcJrb9Wtfq12VGtCZAnyaI-ba_rhy7h6kfb0YP4SVumXrMZxGDRPIDAYsf2nPwKHP1rVgwS4QFx7vSY_oe6Jd_IHRzzpmCIgjlEPEl4530dTrw")
+import synapseclient
+from synapseclient import File
 
+# Log in to Synapse
+syn = synapseclient.Synapse()
+syn.login(authToken='YOUR_API_TOKEN')
 
 
 # Define the Synapse ID of the file to download
