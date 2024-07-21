@@ -1,14 +1,9 @@
 # Binary Polyp Classification with CNN
 
-This file explains the implementation of Polyp-AI. Results can be found under RESULTS.md, and the main python file can be found under polyp_ai.py. Finally, any credits/sources are found under CREDITS.md .
-
 This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. The model is trained to classify images into two categories: `negativeOnly` and `positive`.
 
 ## Project Structure
 
-- **Data Directory**: `sequenceData`
-  - `negativeOnly`: Directory containing images without polyps.
-  - `positive`: Directory containing images with polyps.
 - **Model**: `BinaryClassificationCNN`
 - **Hyperparameters**: 
   - Learning rate: `0.0005`
@@ -31,17 +26,15 @@ This project involves training a Convolutional Neural Network (CNN) for binary c
 - numpy
 - tqdm
 - Pillow
+- synapseclient
 
 ### Installation
 
 Install the required packages using pip:
 
 ```bash
-pip install torch torchvision matplotlib numpy tqdm pillow
+pip install torch torchvision matplotlib numpy tqdm pillow synapseclient
 
-## Training the Model
-
-The model can be trained using the provided hyperparameters. The training and testing steps include the calculation of loss and accuracy for each epoch.
 
 ### Training and Evaluation Loop
 
@@ -53,7 +46,7 @@ optimizer = optim.Adam(model.parameters(), lr=lr)
 
 # Train the model
 train_and_evaluate(model, train_loader, test_loader, loss_fn, optimizer, accuracy_fn, device, epochs)
-```
+
 
 ## Visualizing Predictions
 
