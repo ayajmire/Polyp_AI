@@ -1,7 +1,14 @@
-## Binary Classification of Polyps (Cancer Precursors) through CNNs
+# Binary Classification of Polyps (Cancer Precursors) through CNNs
 
 
 This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. Polyps are precursors for cancer found durign colonoscopies. The model is trained to classify images into two categories: `Positive` and `Negative`.
+
+## Disclaimer
+
+- To train the model, there is no dataset on Github. Dataset is extracted from Synapse once you run the script locally
+- Use your own API token on line 40 to extract the data from synapse client
+- Lines 13 - 64 and 470 - end of file contain all code used to train the model
+- The commented section between 64 - 470 of the script was my attempt at implementing an Object detection model with the use of CNNs that outputs masks.
 
 ## Project Structure
 
