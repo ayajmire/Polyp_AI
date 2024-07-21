@@ -8,6 +8,8 @@ Original file is located at
 """
 
 ###Here is the code used to create Polyp AI, a CNN based model used to categorize polyps during colonoscopies. Data was downloaded from the PolypGen database
+###Lines 13 - 64 and 470 - end of file contain all code used to train the model
+###The commented section between 64 - 470 was my attempt at implementing an Object detection model with the use of CNNs that outputs masks.
 
 import torch
 from torch import nn
