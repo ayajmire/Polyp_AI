@@ -1,6 +1,7 @@
-#Binary Classification of Polyps (Cancer Precursors) through CNNs
+## Binary Classification of Polyps (Cancer Precursors) through CNNs
 
-This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. The model is trained to classify images into two categories: `negativeOnly` and `positive`.
+
+This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. Polyps are precursors for cancer found durign colonoscopies. The model is trained to classify images into two categories: `Positive` and `Negative`.
 
 ## Project Structure
 
@@ -30,13 +31,17 @@ This project involves training a Convolutional Neural Network (CNN) for binary c
 
 ### Installation
 
-Install the required packages using pip:
+Install the required packages using pip/pip3:
 
 ```bash
-pip install torch torchvision matplotlib numpy tqdm pillow synapseclient
-
+pip3 install torch torchvision matplotlib numpy tqdm pillow synapseclient
+```
 
 ### Training and Evaluation Loop
+
+The model uses binary classification with logits loss as the loss function. The optimizer used was Adam. 
+
+This code was device agnostic, meaning both your computer's CPU or a Google Colab GPU can be used to run the script.
 
 ```python
 # Initialize the model, loss function, and optimizer
@@ -46,7 +51,7 @@ optimizer = optim.Adam(model.parameters(), lr=lr)
 
 # Train the model
 train_and_evaluate(model, train_loader, test_loader, loss_fn, optimizer, accuracy_fn, device, epochs)
-
+```
 
 ## Visualizing Predictions
 
