@@ -1,4 +1,4 @@
-# Binary Polyp Classification with CNN
+#Binary Classification of Polyps (Cancer Precursors) through CNNs
 
 This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. The model is trained to classify images into two categories: `negativeOnly` and `positive`.
 
