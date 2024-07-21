@@ -8,6 +8,10 @@ This project involves training a Convolutional Neural Network (CNN) for binary c
 - Performace / Results can be found under `RESULTS.md`
 - Citations can be found under `CITATIONS.md`
 
+
+![Unknown-5](https://github.com/user-attachments/assets/1dfba9df-f477-4479-aa96-0056353afb15)
+
+
 ## Disclaimer
 
 - To train the model, there is no dataset on Github. Dataset is extracted from Synapse once you run the script locally
@@ -92,7 +96,3 @@ conf_matrix = generate_confusion_matrix(model, test_loader, device)
 This project demonstrates the use of a CNN for binary classification of polyp images. The model's performance is evaluated using accuracy, loss, and a confusion matrix to analyze the classification results.
 
 Feel free to modify the hyperparameters and experiment with different configurations to improve the model's performance.
-
-## License
-
-This project is licensed under the MIT License.
