@@ -3,6 +3,7 @@
 
 This project involves training a Convolutional Neural Network (CNN) for binary classification of polyp images. Polyps are precursors for cancer found durign colonoscopies. The model is trained to classify images into two categories: `Positive` and `Negative`.
 
+- Model can be used through the `polypdetector.py` script
 - Script to train model can be found under `polyp_ai.py`
 - Trained model can be found under `Polyp_AI_Model_V0-2.pth`
 - Performace / Results can be found under `RESULTS.md`
