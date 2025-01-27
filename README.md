@@ -10,7 +10,6 @@ This project involves training a Convolutional Neural Network (CNN) for binary c
 - Citations can be found under `CITATIONS.md`
 
 
-![Unknown-5](https://github.com/user-attachments/assets/1dfba9df-f477-4479-aa96-0056353afb15)
 
 
 ## Disclaimer
